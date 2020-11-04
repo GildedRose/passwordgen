@@ -57,15 +57,40 @@ function passwordOptions () {
     
 }
 
+function createRandom(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomElem = arr[randomIndex];
 
+  return randomElem;
+}
 
+function createPassword() {
+  var options = passwordOptions();
+  var result =[];
+  var possibleCharacters = [];
+  var guarnteedCharacters = [];
 
+  if (options.lowerChar) {
+    possibleCharacters = possibleCharacters.contact(lowercaseCharacters);
+    guarnteedCharacters.push(getRandom(lowercaseCharacters));
+  }
 
+  if (options.upperChar) {
+    possibleCharacters = possibleCharacters.contact(uppercaseCharacters);
+    guarnteedCharacters.push(getRandom(uppercaseCharacters));
+  }
 
+  if (options.numericChar) {
+    possibleCharacters = possibleCharacters.contact(numericCharacters);
+    guarnteedCharacters.push(getRandom(numericCharacters));
+  }
 
+  if (options.specialChar) {
+    possibleCharacters = possibleCharacters.contact(specialCharacters);
+    guarnteedCharacters.push(getRandom(specialCharacters));
+  }
 
-
-
+}
 
 
 
