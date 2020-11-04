@@ -15,3 +15,5 @@ At least one character type must be selected. Then a unique password is generate
 Technology Used
 - HTML/CSS
 - Javascript
+
+
